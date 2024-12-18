@@ -1,11 +1,11 @@
 Nhóm 3 - Môn công nghệ phần mềm
 Thành viên nhóm:
-    1. Hoàng Trung Nguyên - 
-    2. Đoàn Văn Vĩnh - 
-    3. Lê Võ Phú Quý
-    4. Ngô Bá Thiện
-    5. Phạm Thị Thu Hằng
-    6. Huỳnh Đắc Cường
+    1. Hoàng Trung Nguyên - Backend (18%)
+    2. Đoàn Văn Vĩnh - Frontend (20%)
+    3. Lê Võ Phú Quý - Backend (18%)
+    4. Ngô Bá Thiện - Backend (18%)
+    5. Phạm Thị Thu Hằng - Hỗ trợ thêm dữ liệu (13%)
+    6. Huỳnh Đắc Cường - Frontend (13%)
 
 Hướng dẫn cách chạy code
 Dowload code front end: https://github.com/dzechan98/fe-cnpm

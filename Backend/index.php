@@ -4,9 +4,9 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 $servername = "localhost";
-$username = "tvppdznq_cnpm"; // Tên người dùng MySQL
-$password = "65mTe4MXEPsddYx6tgRN"; // Mật khẩu MySQL
-$dbname = "tvppdznq_cnpm"; // Tên cơ sở dữ liệu
+$username = "tvppdznq_cnpm"; 
+$password = "65mTe4MXEPsddYx6tgRN"; 
+$dbname = "tvppdznq_cnpm"; 
 
 // Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -28,7 +28,7 @@ $offset = ($page - 1) * $items_per_page; // Vị trí bắt đầu của dữ li
 $tendanhmuc = isset($_GET['tendanhmuc']) ? $conn->real_escape_string($_GET['tendanhmuc']) : '%';  // Lọc tất cả nếu không có giá trị
 $tensanpham = isset($_GET['tensanpham']) ? $conn->real_escape_string($_GET['tensanpham']) : '%';  // Lọc tất cả nếu không có giá trị
 
-// Lấy tổng số sản phẩm
+
 $total_rows_sql = "SELECT COUNT(*) as total_rows FROM SanPham 
                     JOIN DanhMuc ON SanPham.MaDanhMuc = DanhMuc.MaDanhMuc 
                     WHERE DanhMuc.TenDanhMuc LIKE '%$tendanhmuc%' 
@@ -40,8 +40,10 @@ $total_rows = 0;
 if ($total_rows_result) {
     $total_rows = $total_rows_result->fetch_assoc()['total_rows'];
 }
+$keywords = explode(' ', $tensanpham);
 
-// Lệnh SQL để lấy sản phẩm (bỏ phần MaGiamGia và thêm TenDanhMuc, PhanTramGiam, GiaSauGiam, TenGiamGia)
+$search_query = implode('%', $keywords);
+
 $sql = "SELECT SanPham.MaSanPham, SanPham.TenSanPham, SanPham.Gia, SanPham.HinhAnh, 
         SanPham.SoLuong, SanPham.MaDanhMuc, SanPham.MoTa, SanPham.DaBan, 
         SanPham.SoLuongConLai, DanhMuc.TenDanhMuc, GiamGia.PhanTramGiam, GiamGia.TenGiamGia,
@@ -50,7 +52,7 @@ $sql = "SELECT SanPham.MaSanPham, SanPham.TenSanPham, SanPham.Gia, SanPham.HinhA
         JOIN DanhMuc ON SanPham.MaDanhMuc = DanhMuc.MaDanhMuc
         LEFT JOIN GiamGia ON SanPham.MaGiamGia = GiamGia.MaGiamGia
         WHERE DanhMuc.TenDanhMuc LIKE '%$tendanhmuc%' 
-        AND SanPham.TenSanPham LIKE '%$tensanpham%'
+        AND SanPham.TenSanPham LIKE '%$search_query%'
         LIMIT $items_per_page OFFSET $offset";
 
 $result = $conn->query($sql);
