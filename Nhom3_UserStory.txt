@@ -1,0 +1,19 @@
+Module đặt hàng áo, quần và phụ kiện
+
+Khi vào màn hình chính bạn sẽ thấy ngay các sản phẩm, và bên trái là danh mục sản phẩm kèm theo tìm kiếm sản phẩm
+Nhấn vào sản phẩm thì sẽ hiện chi tiết sản phẩm
+Bấm thêm vào giỏ hàng thì sẽ vào giỏ hàng
+Bấm đặt hàng thì sẽ đặt hàng thành công
+
+Nếu bạn chọn danh sách sản phẩm, hệ thống sẽ hiển thị toàn bộ các sản phẩm hiện có trong cửa hàng.
+Nếu hết hàng hệ thống sẽ hiển thị hết hàng ngay trên hình ảnh
+Khi bạn bấm vào một sản phẩm nào đó, nó sẽ hiển thị thông tin chi tiết của món hàng đó. Bạn chỉ cần chọn size và màu sau đó bấm thêm vào giỏ hàng
+
+Tìm kiếm sản phẩm mong muốn theo mọi loại tên, chọn kích thước và màu sắc, sau đó xác nhận thêm vào đơn hàng.
+
+Trong tất cả các trường hợp, hệ thống sẽ kiểm tra xem bạn đã chọn kích thước, màu sắc và số lượng có hợp lệ không.
+Bạn sẽ được chọn các màu sắc và kích thước đang có sẵn trong kho. Sau đó bạn bấm thêm vào giỏ hàng
+
+Sau khi bạn đã thêm vào giỏ hàng sản phẩm mới, những sản phẩm trong giỏ hàng bạn đã chọn sẽ được hiển thị để kiểm tra lại. 
+Bạn có thể bấm tiếp tục mua sắm để tiếp tục xem các sản phẩm khác 
+Nếu bạn nhấp tiến hành đặt hàng, đơn hàng của bạn sẽ được lưu vào cơ sở dữ liệu ngay lập tức.

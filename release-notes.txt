@@ -1,0 +1,20 @@
+Nhóm 3 - Môn công nghệ phần mềm
+Thành viên nhóm:
+    1. Hoàng Trung Nguyên - 
+    2. Đoàn Văn Vĩnh - 
+    3. Lê Võ Phú Quý
+    4. Ngô Bá Thiện
+    5. Phạm Thị Thu Hằng
+    6. Huỳnh Đắc Cường
+
+Hướng dẫn cách chạy code
+Dowload code front end: https://github.com/dzechan98/fe-cnpm
+Sau đó tiến hành chạy 3 lệnh sau
+1. npm install
+2. npm run dev
+3. Truy cap vao http://localhost:5173
+
+Backend (Bọn em đã đẩy lên hosting nên bước này cũng không cần lắm)
+Bước 1: Cài đặt Xampp
+Bước 2: Đẩy code backend vào C:\xampp\htdocs
+Bước 3: Bật phpmyadmin và mysql lên (Lưu ý sửa database.php trước khi chạy)
